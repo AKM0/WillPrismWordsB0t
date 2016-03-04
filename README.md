@@ -16,6 +16,6 @@ is stored to a text file of completed comments/message ids so that the bot never
 and messages, the bot sleeps for 3 seconds. This reduces the CPU load on the machine. 
 
 The formatting is possible because of ideographic unicode characters. Ideographic characters, or fullwidth characters, have the 
-same width. Using a combination of fullwdith characters and a fullwidth ideographic space, the jar is able to format strings 
+same width. Using a combination of fullwidth characters and a fullwidth ideographic space, the jar is able to format strings 
 into prisms. 
 
