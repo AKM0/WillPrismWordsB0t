@@ -19,8 +19,7 @@ public class WillPrismWordsBot {
 	
 	public static void main (String [] args) {
 
-		
-		for (int i = 0; i < args.length; i++) { //builds a string from args[]
+        for (int i = 0; i < args.length; i++) { //builds a string from args[]
 			if ((i) >= args.length-1) {
 				initial_string = initial_string.append (args[i]);
 			} else {
@@ -56,21 +55,14 @@ public class WillPrismWordsBot {
 		String unicode_string;
 
 		for (int i = 0; i < s.length(); i++) { //scans through entire string
-			
 			for (int k = 0; k < alphabet.length(); k++) { //replaces ASCII character with Unicode fullwidth character
-				
 				if (s.charAt(i) == alphabet.charAt(k)) { 
-					
 					s = s.replace(s.charAt(i), fullwidth_characters.charAt(k));
-				
 				}
-			
 			}
-		
 		}
 		
 		unicode_string = s;
-		
 		return unicode_string; //returns Unicode string
 	
 	}
@@ -78,9 +70,7 @@ public class WillPrismWordsBot {
 	public static void print_top_half (String s) {
 			
 		for (int w = (s.length()-1); w > 0; w--) { //prints spaces before first horizontal edge
-			
 			final_string.append(space);
-			
 		}
 		
 		print_word (s); //prints out first horizontal edge
@@ -89,66 +79,47 @@ public class WillPrismWordsBot {
 		for (int i = (num_of_s); i > 0; i--) {
 			
 			for (int k = i; k > 0; k--) { //space between wall and first diagonal
-				
 				final_string.append(space);
-				
 			} 
 			
 			final_string.append(s.charAt(i));
-					
 			for (int n = num_of_s; n > 0; n--) { //prints spaces between first and second diagonal
-			
-				final_string.append(space);
-				
+			    final_string.append(space);
 			}
 			
 			final_string.append(s.charAt(i));
 			
 			for (int c = (num_of_s - i); c > 0; c--) { //prints spaces between second diagonal and vertical edge
-				
 				final_string.append(space);
-				
 			}
-			
 			final_string.append(s.charAt(i));
 			final_string.append("\n\n");
-			
-			
 		}
-		
 	}
 	
 	public static void print_lower_half (String s) {
 		
-		
-		print_word (s); //prints out second horizontal edge
+	    print_word (s); //prints out second horizontal edge
 		
 		for (int w = num_of_s; w > 0; w--) { //prints spaces before first horizontal edge and outer letter
-		
-			final_string.append(space);
-					
+		    final_string.append(space);
 		}
 		
 		final_string.append(s.charAt(0));
 		final_string.append("\n\n");
-		
-			
+
 		for (int i = 1; i < s.length()-1; i++) {
 		
 			final_string.append(s.charAt(i));
 				
 			for (int n = num_of_s; n > 0; n--) { //prints spaces between first and second vertical edge
-				
-				final_string.append(space);
-					
+			    final_string.append(space);
 			}
 		
 			final_string.append(s.charAt(i));
 				
 			for (int c = (num_of_s -i); c > 0; c--) { //prints spaces between second diagonal and vertical edge
-				
 				final_string.append(space);
-					
 			}
 			
 			final_string.append(s.charAt(i));
@@ -156,21 +127,13 @@ public class WillPrismWordsBot {
 			final_string.append("\n\n");
 				
 		}
-		
 		print_word (s);
-			
 	}
 	
 	public static void print_word (String s) { // simply prints word without any ideographic spaces
 		
-		
 		for (int i = 0; i < s.length(); i++) {
-			
 			final_string.append(s.charAt(i));
-			
-				
 		}
-			
 	}
-
 }
