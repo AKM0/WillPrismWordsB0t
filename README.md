@@ -1,5 +1,7 @@
 # WillPrismWordsB0t
 
+![Example](https://i.imgur.com/4dXCM6N.jpg)
+
 A Reddit Bot that formats words into prisms
 
 This bot uses both Python and Java. 
